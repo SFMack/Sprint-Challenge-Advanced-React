@@ -3,6 +3,8 @@ import axios from 'axios';
 import Player from './Player.js';
 import './App.css';
 
+export const sum = (a, b) => a + b;
+
 export default class App extends Component {
 	constructor() {
 		super();
@@ -24,6 +26,7 @@ export default class App extends Component {
 
 	render() {
 		const { data } = this.state;
+
 		return (
 			<div className='App'>
 				<Player data={data} />

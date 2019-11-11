@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import usePlayerDetails from './hooks/usePlayerDetails';
 
 export default function Player(props) {
-	const [thisPlayer, setThisPlayer] = useState([]);
-
-	useEffect(() => {
-		setThisPlayer(props);
-	});
-
-	const { data } = thisPlayer;
-	console.log(data);
+	const data = usePlayerDetails(props);
 
 	return (
 		<div className='player-card-wrapper'>
