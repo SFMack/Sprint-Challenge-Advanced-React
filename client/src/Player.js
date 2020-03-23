@@ -15,14 +15,31 @@ export default function Player(props) {
 	`;
 
 	const PlayerCardWrapper = styled.div`
-		flex-basis: 25%;
+		flex-basis: 20%;
 		text-align: center;
-		border: 1px solid grey
-		margin: 1rem 0.1rem;
+		border: 1px solid lightgrey;
+		margin: 1rem 0;
+		border-radius: 1rem;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	`;
+
+	const PlayerImage = styled.img`
+		margin-top: 1rem;
 		border-radius: 1rem;
 	`;
 
-	const PlayerImage = styled.img``;
+	const PlayerCardName = styled.h1`
+		margin: 0.5rem 0;
+		width: 100%;
+	`;
+
+	const PlayerCardCountry = styled.h3`
+		margin: 0.5rem 0;
+	`;
+
+	const PlayerCardSearches = styled.h4`
+		margin: 1rem 0;
+	`;
 
 	return (
 		<PlayerCardContainer>
@@ -30,9 +47,11 @@ export default function Player(props) {
 				? data.map((player, index) => (
 						<PlayerCardWrapper key={index}>
 							<PlayerImage src={player.profileImage} />
-							<h1>{player.name}</h1>
-							<h3>{player.country}</h3>
-							<h4>Searches: {player.searches}</h4>
+							<PlayerCardName>{player.name}</PlayerCardName>
+							<PlayerCardCountry>{player.country}</PlayerCardCountry>
+							<PlayerCardSearches>
+								Searches: {player.searches}
+							</PlayerCardSearches>
 						</PlayerCardWrapper>
 				  ))
 				: null}
