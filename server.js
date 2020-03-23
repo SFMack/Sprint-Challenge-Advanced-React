@@ -12,9 +12,9 @@ app.use(cors());
 const players = data.map((player, index) => ({ ...player, id: index }));
 
 app.get('/api/players', (req, res) => {
-  res.send(players);
+	res.send(players);
 });
 
 app.listen(port, () => {
-  console.log(`server listening on port ${port}`);
+	console.log(`server listening on port ${port}`);
 });
