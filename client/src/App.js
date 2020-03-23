@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Player from './Player.js';
-import './App.css';
 
 export const sum = (a, b) => a + b;
 
