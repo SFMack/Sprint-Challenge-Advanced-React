@@ -1,12 +1,12 @@
 import React from 'react';
 import usePlayerDetails from './hooks/usePlayerDetails';
-import getPlayerIcon from './hooks/getPlayerIcon';
+// import getPlayerIcon from './hooks/getPlayerIcon';
 import styled from 'styled-components';
 
 export default function Player(props) {
 	const data = usePlayerDetails(props);
-	const icon = getPlayerIcon();
-	console.log(icon);
+	// const icon = getPlayerIcon(props);
+	// console.log(icon);
 
 	const PlayerCardContainer = styled.div`
 		margin: 0 auto;
