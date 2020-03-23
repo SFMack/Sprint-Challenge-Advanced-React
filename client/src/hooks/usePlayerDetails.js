@@ -5,7 +5,7 @@ export default function usePlayerDetails(state) {
 
 	useEffect(() => {
 		setThisPlayer(state);
-	});
+	}, [state]);
 
 	const { data } = thisPlayer;
 
